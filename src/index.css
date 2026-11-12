@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-serif-title {
+    font-family: 'Cinzel', serif;
+  }
+  .font-formal {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  .font-script {
+    font-family: 'Great Vibes', cursive;
+  }
+  .font-signature {
+    font-family: 'Alex Brush', cursive;
+  }
+  .font-sans-clean {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  .font-modern {
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+  .font-classic {
+    font-family: 'Merriweather', Georgia, serif;
+  }
+}
+
+/* Certificate print styles */
+@media print {
+  body {
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide everything except the printable certificate */
+  .no-print, header, nav, footer, aside, .generator-sidebar, .controls-bar, .modal-backdrop, .toast-container {
+    display: none !important;
+  }
+
+  .print-only-container {
+    display: block !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  #printable-certificate {
+    box-shadow: none !important;
+    margin: 0 auto !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+    size: auto;
+  }
+}

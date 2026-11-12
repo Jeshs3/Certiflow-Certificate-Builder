@@ -1,0 +1,6 @@
+{
+  "name": "Certificate Template Generator",
+  "description": "Create, customize, preview, and print professional sample Birth and Marriage certificate templates for educational, demonstration, and personal mockup purposes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
